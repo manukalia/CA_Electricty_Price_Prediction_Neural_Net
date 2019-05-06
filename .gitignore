@@ -1,0 +1,11 @@
+#  local .gitignore ... set of files for git to ignore...
+
+.DS_Store
+.ipynb_checkpoints
+
+caiso_downloads/
+reference_materials/
+
+unzipped_caiso/
+weather_downloads/
+ca_dwr_dl/
