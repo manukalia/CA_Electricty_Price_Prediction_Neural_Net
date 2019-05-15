@@ -3,9 +3,6 @@
 .DS_Store
 .ipynb_checkpoints
 
-data/raw_data/caiso_downloads/
-reference_materials/
-
-data/raw_data/unzipped_caiso/
-data/raw_data/noaa_weather/
-data/raw_data/ca_dwr_dl/
+data/*
+reference_materials/*
+fitted_models/*
