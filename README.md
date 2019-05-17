@@ -12,7 +12,7 @@ Manu Kalia<br/>
 ---
 
 # Electricity Price Model Using Recurrent Neural Networks  
-  
+
 **Predicting California Hour-ahead Electricity Prices, Based on Weather and Day-ahead Market Prices,**  
 **Employing a Recursive Neural Network as Well as ARIMA and SARIMAX Time-series ML Techniques**  
 
@@ -20,7 +20,7 @@ Manu Kalia<br/>
 and day-ahead (DAM) markets, and the best mix a power generator should use in selling energy into the CA grid.  
 
 
-<br/> 
+<br/>
 
 ---
 
@@ -40,7 +40,7 @@ Altogether, there are 16 weather features, one water level feature, four datetim
 
 ## DATA DICTIONARY  
 
-<br/> 
+<br/>
 
 | ITEM NAME          | DESCRIPTION                     | NOTES                                            |
 |:-------------------|:--------------------------------|:------------------------------------------------------------------------------------------------|
@@ -62,24 +62,24 @@ Altogether, there are 16 weather features, one water level feature, four datetim
 | water_acre_feet    | CA Water Level                  | Total of 47 CA reservoirs' water content, in acre-feet |
 |.                   |.                                |.                                                 |
 | sand_temp          | San Diego weather stn Temp      | NOAA hrly data (-0932 to +0618) in deg C, scaling factor 10, NaN=9999 |
-| sand_wind          | San Diego weather stn Sind speed| NOAA hrly data (0-900) in m/s, scaling factor 10, NaN=9999|
+| sand_wind          | San Diego weather stn Wind speed| NOAA hrly data (0-900) in m/s, scaling factor 10, NaN=9999|
 | sand_vis           | San Diego weather stn Visibility| NOAA hrly data; horiz. visibility dist (0-160000 in m,  scaling factor 1, NaN=999999  |
-| sand_ceil          | San Diego weather stn Ceiling   | NOAA hrly data; cloud ceiling height (0-22000) in m,  scaling factor 1, NaN=99999  |
+| sand_ceil          | San Diego weather stn Cloud Ceiling   | NOAA hrly data; cloud ceiling height (0-22000) in m,  scaling factor 1, NaN=99999  |
 |.                   |.                                |.                                                 |
 | rive_temp          | Riverside weather stn Temp      | NOAA hrly data (-0932 to +0618) in deg C, scaling factor 10, NaN=9999 |
-| rive_wind          | Riverside weather stn Sind speed| NOAA hrly data (0-900) in m/s, scaling factor 10, NaN=9999|
+| rive_wind          | Riverside weather stn Wind speed| NOAA hrly data (0-900) in m/s, scaling factor 10, NaN=9999|
 | rive_vis           | Riverside weather stn Visibility| NOAA hrly data; horiz. visibility dist (0-160000 in m,  scaling factor 1, NaN=999999  |
-| rive_ceil          | Riverside weather stn Ceiling   | NOAA hrly data; cloud ceiling height (0-22000) in m,  scaling factor 1, NaN=99999  |
+| rive_ceil          | Riverside weather stn Cloud Ceiling   | NOAA hrly data; cloud ceiling height (0-22000) in m,  scaling factor 1, NaN=99999  |
 |.                   |.                                |.                                                 |
 | redd_temp          | Redding weather stn Temp        | NOAA hrly data (-0932 to +0618) in deg C, scaling factor 10, NaN=9999 |
-| redd_wind          | Redding weather stn Sind speed  | NOAA hrly data (0-900) in m/s, scaling factor 10, NaN=9999|
+| redd_wind          | Redding weather stn Wind speed  | NOAA hrly data (0-900) in m/s, scaling factor 10, NaN=9999|
 | redd_vis           | Redding weather stn Visibility  | NOAA hrly data; horiz. visibility dist (0-160000 in m,  scaling factor 1, NaN=999999  |
-| redd_ceil          | Redding weather stn Ceiling     | NOAA hrly data; cloud ceiling height (0-22000) in m,  scaling factor 1, NaN=99999  |
+| redd_ceil          | Redding weather stn Cloud Ceiling     | NOAA hrly data; cloud ceiling height (0-22000) in m,  scaling factor 1, NaN=99999  |
 |.                   |.                                |.                                                 |
 | fres_temp          | Fresno weather stn Temp         | NOAA hrly data (-0932 to +0618) in deg C, scaling factor 10, NaN=9999 |
-| fres_wind          | Fresno weather stn Sind speed   | NOAA hrly data (0-900) in m/s, scaling factor 10, NaN=9999|
+| fres_wind          | Fresno weather stn Wind speed   | NOAA hrly data (0-900) in m/s, scaling factor 10, NaN=9999|
 | fres_vis           | Fresno weather stn Visibility   | NOAA hrly data; horiz. visibility dist (0-160000 in m,  scaling factor 1, NaN=999999  |
-| fres_ceil          | Fresno weather stn Ceiling      | NOAA hrly data; cloud ceiling height (0-22000) in m,  scaling factor 1, NaN=99999  |
+| fres_ceil          | Fresno weather stn Cloud Ceiling      | NOAA hrly data; cloud ceiling height (0-22000) in m,  scaling factor 1, NaN=99999  |
 |.                   |.                                |.                                                 |
 | year               | 2016, 2017, 2018, 2019          | .  |
 | month              | 1 - 12                          | .  |
